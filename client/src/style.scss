@@ -1,0 +1,173 @@
+*{
+    margin: 0
+}
+
+/* ** variables ** */
+
+$border-color: rgb(154, 164, 172);
+$border: 2px;
+$grid-layout: 1fr 1fr 1fr 1fr 1fr;
+$text-color: rgb(70, 70, 70);
+
+/* ** navbar ** */
+
+nav{
+    background-color: rgb(105, 167, 191);
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    color: $text-color;
+    font-family: sansProS;
+    justify-content: space-between;
+}
+
+.navLink{
+    text-decoration: none;
+    color: $text-color;
+    font-family: sansProR;
+    padding: 20px
+}
+
+
+/* ** home page ** */
+
+.mainImag{
+    background-image: url("https://images.unsplash.com/photo-1557804506-d8017c1e4856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+}
+
+.spacerBack{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    min-height: 80vh;
+    flex-direction: column;
+    .columHeaders{
+        background-color: rgb(197, 209, 217);
+        display: grid;
+        grid-template-columns: $grid-layout;
+        text-align: center;
+        width: 80%;
+        color: $text-color;
+        font-family: sansProS;
+        h2{
+            font-size: 20px;
+            border: $border solid $border-color;
+            text-align: center;
+        }
+    }
+}
+
+.tableBack{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .employeeInfo{
+        display: grid;
+        grid-template-columns: $grid-layout;
+        text-align: center;
+        width: 80%;
+        color: $text-color;
+        font-family: sansProR;
+        h3{
+            border: $border solid $border-color;
+            font-size: 16px;
+            max-width: 16vw;
+            overflow: scroll;
+            background-color: rgba(128, 128, 128, 0.151)
+        }
+        .editOrDelete-true{
+            display: none;
+        }
+        .editOrDelete-false{
+            margin: 10px
+        }
+        .formBreak{
+            width: 100%;
+            display: flex;
+            .editForm-false{
+                display: none;
+            }
+            .editForm-true{
+                display: flex;
+                flex-direction: column;
+                .buttonSparater{
+                    .editButton{
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pageLink{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+    color: $text-color;
+    font-family: sansProR;
+}
+
+/* ** footer ** */
+
+footer{
+    height: 150px;
+    width: 100%;
+    background-color: rgb(105, 167, 191);
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $text-color;
+    font-family: sansProS;
+    h4{
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .footerLinkDiv{
+        display: flex;
+        flex-direction: column;
+        .footerLink{
+            color: $text-color;
+            text-decoration: none;
+            font-family: sansProR;
+            margin-left: 20px;
+        }
+    }
+}
+
+
+/* ** edit ** */
+
+.addFormBack{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .addForm{
+        width: 60%;
+        display: grid;
+        grid-template-columns: $grid-layout 1fr;
+    }
+}
+
+/* ** fonts ** */
+
+@font-face{
+    font-family: sansProR;
+    src: url(./fonts/SourceSansPro-Regular.ttf)
+}
+
+@font-face{
+    font-family: sansProS;
+    src: url(./fonts/SourceSansPro-SemiBold.ttf)
+}
