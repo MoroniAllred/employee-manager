@@ -20,7 +20,12 @@ componentDidMount = () => {
 }
 
     render(){
-        const mappedEmployees = this.state.employee.map(emp => <EmpTable {...emp}/>)
+        const mappedEmployees = this.state.employee.map(emp => 
+                                                            <EmpTable 
+                                                                {...emp} 
+                                                                lastName={emp.lastName[0].toUpperCase() + emp.lastName.slice(1)} 
+                                                                firstName={emp.firstName[0].toUpperCase() + emp.firstName.slice(1)}
+                                                                phone={`(${emp.phone.toString().slice(0, 3)}) ${emp.phone.toString().slice(3,6)}-${emp.phone.toString().slice(6)}`}/>)
         return(
             <div>
                 <div className = "mainImag"></div>

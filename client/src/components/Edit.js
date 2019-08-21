@@ -64,7 +64,10 @@ class Edit extends Component{
             }
 
     render(){
-        const mappedEditEmployees = this.state.employee.map(emp => <EditTable {...emp} handleEditReload={this.handleEditReload} handleDelet={this.handleDelet}/>)
+        const mappedEditEmployees = this.state.employee.map(emp => <EditTable {...emp} 
+            lastName={emp.lastName[0].toUpperCase() + emp.lastName.slice(1)} 
+            firstName={emp.firstName[0].toUpperCase() + emp.firstName.slice(1)}
+            phone={`(${emp.phone.toString().slice(0, 3)}) ${emp.phone.toString().slice(3,6)}-${emp.phone.toString().slice(6)}`}/>)
         return(
             <div>
                 <div className="addFormBack">
